@@ -10,7 +10,7 @@ alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 
 # Plugins
-plugins=(git svn ruby)
+plugins=(gem sublime brew git svn ruby)
 
 source $ZSH/oh-my-zsh.sh
 
