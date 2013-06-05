@@ -1,8 +1,9 @@
 syntax enable
 
-colorscheme Tomorrow-Night-Eighties
+colorscheme Monokai 
+let g:molokai_original=1
+let g:rehash256=1
 
-set background=dark
 set guifont=Menlo\ Regular:h14
 set hlsearch
 set tabstop=4
