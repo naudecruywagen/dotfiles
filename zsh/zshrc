@@ -17,7 +17,7 @@ plugins=(gem sublime brew git svn ruby)
 source $ZSH/oh-my-zsh.sh
 
 # Customize 
-export LSCOLORS="Gxfxbxdxcxaeadabagacdx"
+export LSCOLORS="Dxcxbxdxcxaeadabagacdx"
 export LC_CTYPE="utf-8"
 alias ls='ls -A -G'
 
