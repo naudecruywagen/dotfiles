@@ -9,5 +9,19 @@ set hlsearch
 set tabstop=4
 set shiftwidth=4
 set number
+set nowrap
 
-autocmd BufNewFile,BufRead *.json set ft=javascript
+" == SETUP FILETYPES ======================================
+
+" autocmd BufNewFile,BufRead *.json set ft=javascript
+au BufRead,BufNewFile *.{bones,json,geojson,mml} set filetype=javascript
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set filetype=mkd
+
+" == KEY BINDINGS =========================================
+
+" Disable the arrow keys to learn the hard way
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+

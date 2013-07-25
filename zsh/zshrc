@@ -19,6 +19,14 @@ source $ZSH/oh-my-zsh.sh
 # Customize 
 export LSCOLORS="Dxcxbxdxcxaeadabagacdx"
 export LC_CTYPE="utf-8"
+
 alias ls='ls -A -G'
+alias tmux="TERM=screen-256color-bce tmux"
+export TERM=screen-256color
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+#VI mode
+
+#bindkey -v
+#bindkey '^R' history-incremental-search-backward
