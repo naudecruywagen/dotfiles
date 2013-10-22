@@ -1,1 +1,1 @@
-* Personal config
+Personal config

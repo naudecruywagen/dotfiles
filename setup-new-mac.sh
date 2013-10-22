@@ -1,5 +1,8 @@
 #/bin/bash
 
+
+# this is a work in progress. I will probably only finish it if I ever need to rebuild an OSX instance from scratch.
+
 echo "Instaling Homebrew"
 
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
@@ -25,11 +28,15 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 
 git clone https://github.com/martincronje/dotfiles ~/.amok-osx-config
 
-rm ~/.vimrc
-cp .amok-osx-config/home.vimrc ~/.vimrc
-rm ~/.zshrc
-cp .amok-osx-config/home.zshrc ~/.zshrc
+echo "Linking dotfiles"
 
-ln -s ~/.amok-osx-config/zsh/themes/amok.zsh-theme  ~/.oh-my-zsh/themes/amok.zsh-themeD
+ln -s ~/.dotfiles/.tmux.comf ~/.tmux.conf
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.gvimrc ~/.gvimrc
+
+ln -s ~/.dotfiles/zsh/themes/amok.zsh-theme  ~/.oh-my-zsh/themes/amok.zsh-themeD
+ln -s ~/.dotfiles/.vim/colors/Monokai.vim ~/.vim/colors/Monokai.vim
+
+echo "RVM"
 
 curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby

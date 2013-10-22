@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 syntax enable
 
 " styling
@@ -12,6 +14,7 @@ set tabstop=4
 set shiftwidth=4
 set number
 set ruler
+set clipboard=unnamed
 
 " not to break on words
 set formatoptions=1

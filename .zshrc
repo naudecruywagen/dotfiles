@@ -1,5 +1,6 @@
 export PATH=/usr/local/bin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
+export EDITOR=vi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "/usr/local/share/npm/bin" ]] && export PATH=$PATH:/usr/local/share/npm/bin
