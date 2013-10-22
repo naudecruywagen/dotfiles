@@ -36,6 +36,7 @@ ln -s ~/.dotfiles/.gvimrc ~/.gvimrc
 
 ln -s ~/.dotfiles/zsh/themes/amok.zsh-theme  ~/.oh-my-zsh/themes/amok.zsh-themeD
 ln -s ~/.dotfiles/.vim/colors/Monokai.vim ~/.vim/colors/Monokai.vim
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
 echo "RVM"
 
