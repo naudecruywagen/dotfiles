@@ -1,0 +1,27 @@
+# ~/.tmuxinator/node_dev.yml
+
+name: node_dev
+root: .
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - editor: vi .
+  - debug: 
+      layout: main-vertical
+      panes:
+        - wait 10 && mongo
+        - mocha -R min -w tests/
+        - nodemon app.js
+        - mongod -v
+  - logs: #tail -f logs/development.log
