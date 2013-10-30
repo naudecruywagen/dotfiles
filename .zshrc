@@ -13,7 +13,10 @@ ZSH_THEME="amok"
 # Aliases
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
+alias mvim="mvim -v" 
+alias vi="mvim" 
 
+alias vim="mvim" 
 # Plugins
 plugins=(gem sublime brew git svn ruby)
 
