@@ -35,3 +35,7 @@ set tm=500
 " setup filetypes 
 au BufRead,BufNewFile *.{bones,json,geojson,mml} set filetype=javascript
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set filetype=mkd
+
+" setup NERDTRee
+
+autocmd VimEnter * NERDTree

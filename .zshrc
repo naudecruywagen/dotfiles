@@ -34,5 +34,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 #VI mode
 
-#bindkey -v
-#bindkey '^R' history-incremental-search-backward
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
