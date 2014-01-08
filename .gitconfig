@@ -25,3 +25,4 @@
 	filelog = log -u
 	fl = log -u
 	st = status --porcelain
+	ca = commit -am

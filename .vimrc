@@ -16,6 +16,12 @@ set number
 set ruler
 set clipboard=unnamed
 
+" cusror styles
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
+
 " not to break on words
 set formatoptions=1
 set linebreak

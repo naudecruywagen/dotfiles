@@ -20,8 +20,12 @@ windows:
   - debug: 
       layout: main-vertical
       panes:
-        - sleep 10 && mongo
         - mocha -R min -w tests/
         - nodemon app.js
+  - mongo:
+      layout: main-vertical
+      panes:
+        - sleep 10 && mongo
         - mongod -v
-  - logs: #tail -f logs/development.log
+        - tail -f /usr/local/var/log/mongodb/mongo.log
+  - shell: 
