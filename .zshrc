@@ -32,10 +32,26 @@ export TERM=screen-256color
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-#VI mode
+# Bindings
 
-bindkey -v
-bindkey '^R' history-incremental-search-backward
-bindkey '^S' history-incremental-search-forward
-bindkey '^[[A' up-line-or-search
-bindkey '^[[B' down-line-or-search
+bindkey -v			#VI mode
+
+# Searchi
+bindkey '^R'      history-incremental-search-backward
+bindkey '^S'      history-incremental-search-forward
+bindkey '^[[A' 	  up-line-or-search	# Cursor up
+bindkey '^[[B' 	  down-line-or-search	# Cursor down
+
+#Navigation
+bindkey "^[[C"	  forward-char		# Cursor right
+bindkey "^[[D"	  backward-char		# Cursor left
+bindkey "^[^[[C"  forward-word		# Alt Cursor right
+bindkey "^[^[[D"  backward-word		# Alt Cursor left
+bindkey "^[[H"	  beginning-of-line	# Home key
+bindkey "^[[F"	  end-of-line		# End key
+
+# Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
+bindkey '^?' backward-delete-char
+bindkey "^[[3~" delete-char
+bindkey "^[3;5~" delete-char
+bindkey "\e[3~" delete-char

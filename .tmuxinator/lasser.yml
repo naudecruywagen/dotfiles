@@ -1,0 +1,36 @@
+# ~/.tmuxinator/node_dev.yml
+
+name: lasser
+root: ~/Development/git/lasser/src
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - editor: vi
+  - tests: 
+      layout: main-horizontal
+      panes:
+        - cd node.api && NODE_ENV=test nodemon app.js
+        - mocha -R spec -w node.api/tests/
+        - mocha -R spec -w node.cli/tests/
+  - dev:
+      layout: main-horizontal
+      panes:
+        - cd node.api && NODE_ENV=development nodemon app.js
+  - mongo:
+      layout: main-vertical
+      panes:
+        - sleep 10 && mongo
+        - mongod -v
+        - tail -f /usr/local/var/log/mongodb/mongo.log
+  - shell: 
