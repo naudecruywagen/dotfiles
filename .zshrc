@@ -2,7 +2,6 @@ export PATH=/usr/local/bin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EDITOR=vi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "/usr/local/share/npm/bin" ]] && export PATH=$PATH:/usr/local/share/npm/bin
 
 ZSH=$HOME/.oh-my-zsh
@@ -30,7 +29,8 @@ alias ls='ls -A -G'
 alias tmux="TERM=screen-256color-bce tmux"
 export TERM=screen-256color
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 
 # Bindings
 
