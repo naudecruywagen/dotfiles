@@ -1,0 +1,18 @@
+# ~/.tmuxinator/node_dev.yml
+
+name: blog 
+root: .
+
+windows:
+  - editor: vi
+  - debug: 
+      layout: main-vertical
+      panes:
+        - mocha -R min -w tests/
+        - nodemon index.js
+  - mongo:
+      layout: main-vertical
+      panes:
+        - psql 
+        - tail -f /usr/local/var/log/mongodb/mongo.log
+  - shell: 
