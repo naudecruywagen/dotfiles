@@ -1,9 +1,11 @@
 export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/.rvm/bin:$PATH 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EDITOR=vi
+export LC_ALL="en_US.UTF-8"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "/usr/local/share/npm/bin" ]] && export PATH=$PATH:/usr/local/share/npm/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 ZSH=$HOME/.oh-my-zsh
 
@@ -29,8 +31,6 @@ export LC_CTYPE="utf-8"
 alias ls='ls -A -G'
 alias tmux="TERM=screen-256color-bce tmux"
 export TERM=screen-256color
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Bindings
 

@@ -15,6 +15,7 @@ set shiftwidth=4
 set number
 set ruler
 set clipboard=unnamed
+set mouse=a
 
 " cusror styles
 set guicursor=n-v-c:block-Cursor
@@ -25,6 +26,7 @@ set guicursor+=i:blinkwait10
 " not to break on words
 set formatoptions=1
 set linebreak
+set nowrap
 
 " fixing up moving line by line in the paragraph
 nnoremap j gj
