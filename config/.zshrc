@@ -1,11 +1,9 @@
 export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/.rvm/bin:$PATH 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EDITOR=vi
 export LC_ALL="en_US.UTF-8"
 
 [[ -s "/usr/local/share/npm/bin" ]] && export PATH=$PATH:/usr/local/share/npm/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 ZSH=$HOME/.oh-my-zsh
 
@@ -55,3 +53,5 @@ bindkey '^?' backward-delete-char
 bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
 bindkey "\e[3~" delete-char
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

@@ -30,13 +30,14 @@ git clone https://github.com/martincronje/dotfiles ~/.amok-osx-config
 
 echo "Linking dotfiles"
 
-ln -s ~/.dotfiles/.tmux.comf ~/.tmux.conf
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/.gvimrc ~/.gvimrc
+ln -s ~/.dotfiles/config/.tmux.comf ~/.tmux.conf
+ln -s ~/.dotfiles/config/.tmuxinator ~/.tmuxinator
+ln -s ~/.dotfiles/config/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/config/.gvimrc ~/.gvimrc
 
-ln -s ~/.dotfiles/zsh/themes/amok.zsh-theme  ~/.oh-my-zsh/themes/amok.zsh-themeD
-ln -s ~/.dotfiles/.vim/colors/Monokai.vim ~/.vim/colors/Monokai.vim
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/config/zsh/themes/amok.zsh-theme  ~/.oh-my-zsh/themes/amok.zsh-themeD
+ln -s ~/.dotfiles/config/.vim/colors/Monokai.vim ~/.vim/colors/Monokai.vim
+ln -s ~/.dotfiles/config/.gitconfig ~/.gitconfig
 
 echo "RVM"
 
