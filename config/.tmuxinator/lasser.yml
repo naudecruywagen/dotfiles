@@ -1,7 +1,7 @@
 # ~/.tmuxinator/lasser.yml
 
 name: lasser
-root: ~/Development/git/lasser/src
+root: ~/Code/lasser/src
 
 windows:
   - editor: vi

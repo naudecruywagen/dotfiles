@@ -1,8 +1,23 @@
-execute pathogen#infect()
+" vundle setup
 
-syntax enable
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-sensible'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'zerowidth/vim-copy-as-rtf'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
+filetype plugin indent on
 
 " styling
+syntax enable
 colorscheme Monokai 
 let g:molokai_original=1
 let g:rehash256=1
