@@ -8,5 +8,5 @@ windows:
       layout: 6bdc,208x57,0,0[208x44,0,0,0,208x12,0,45,2]
       panes:
         - vi
-        - kicker -l 0.332 -e 'rake'
+        - kicker -l 0.332 -e 'rspec'
   - shell: 

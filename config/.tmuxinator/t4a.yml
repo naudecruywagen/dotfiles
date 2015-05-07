@@ -1,0 +1,14 @@
+# ~/.tmuxinator/node_dev.yml
+
+name: t4a
+root: ~/Code/t4a/src/objc/Tracks4Africa
+
+windows:
+  - editor: vi
+  - appium:
+      layout: main-vertical
+      panes:
+        - sleep 5 && cd appium && arc 
+        - ./scripts/local_build.sh quick,appium
+        -  
+  - shell: 
