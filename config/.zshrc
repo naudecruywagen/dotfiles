@@ -18,7 +18,7 @@ alias vi="mvim"
 
 alias vim="mvim" 
 # Plugins
-plugins=(gem sublime brew git svn ruby)
+plugins=(gem sublime brew git svn ruby emoji)
 
 source $ZSH/oh-my-zsh.sh
 
