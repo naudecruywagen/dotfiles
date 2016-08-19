@@ -43,10 +43,8 @@ set linebreak
 set nowrap
 
 " no annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " setup NERDTRee
 let g:NERDTreeWinSize = 40
@@ -57,3 +55,4 @@ autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=ruby | endif
 
 " esc to clear search highlighting
 nnoremap <silent> <esc> :noh<cr><esc>
+nnoremap <esc>[ <esc>[
