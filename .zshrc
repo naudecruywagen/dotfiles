@@ -26,4 +26,6 @@ alias vim="mvim"
 
 alias glp='git pull && git push'
 alias gcamp='git commit -am $1 && git pull && git push'
+alias fi='fastlane integrate'
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
