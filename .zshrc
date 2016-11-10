@@ -7,7 +7,7 @@ COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(rails git ruby tmux)
+plugins=(rails git ruby pod)
 
 # User configuration
 
