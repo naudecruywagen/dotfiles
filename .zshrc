@@ -1,4 +1,7 @@
-# Path to oh-my-zsh installation.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
+
+# Path to your oh-my-zsh installation.
 export ZSH=/Users/naude/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
@@ -7,26 +10,14 @@ COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(rails git ruby pod)
-
-# User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+plugins=(git pod)
 
 source $ZSH/oh-my-zsh.sh
 
+alias zshconfig="code ~/.zshrc"
+alias fin='fastlane integrate'
+alias fid='bundle exec fastlane integrate_discovery'
+alias fucking='sudo'
+alias start_wiremock='java -jar ./wiremock-standalone-2.5.0.jar --verbose'
+
 eval "$(rbenv init -)"
-
-# Aliases
-alias zshconfig="vi ~/.zshrc"
-
-alias mvim="mvim -v" 
-alias vi="mvim" 
-alias vim="mvim" 
-
-alias glp='git pull && git push'
-alias gcamp='git commit -am $1 && git pull && git push'
-alias fi='fastlane integrate'
-alias fid='fastlane integrate_discovery'
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
