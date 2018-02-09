@@ -16,7 +16,7 @@ plugins=(git pod)
 
 source $ZSH/oh-my-zsh.sh
 
-alias zshconfig="code ~/.zshrc"
+alias zshconfig="vi ~/.zshrc"
 alias fin='fastlane integrate'
 alias fid='bundle exec fastlane integrate_discovery'
 alias fucking='sudo'
