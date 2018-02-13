@@ -24,3 +24,6 @@ ln -s ~/git/dotfiles/.xvimrc ~/.xvimrc
 
 echo "Instaling oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "Disabling press and hold"
+defaults write -g ApplePressAndHoldEnabled -bool false
