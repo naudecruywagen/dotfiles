@@ -20,10 +20,11 @@ alias zshconfig="vi ~/.zshrc"
 alias fin='fastlane integrate'
 alias fid='bundle exec fastlane integrate_discovery'
 alias fucking='sudo'
-alias start_wiremock='java -jar ./wiremock-standalone-2.5.0.jar --verbose'
+alias start_wiremock='java -jar ./wiremock-standalone-2.11.0.jar --verbose'
 alias x='open -a'
 alias o='open -a'
 alias vim=mvim
 alias vi=mvim
+alias reloadzsh="source ~/.zshrc"
 
 eval "$(rbenv init -)"
