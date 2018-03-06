@@ -1,16 +1,16 @@
+" vim-plug setup
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'tomasr/molokai'
+call plug#end()
+
 " vundle setup
-
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'fugitive.vim'
-Plugin 'molokai'
-
-call vundle#end()
 
 filetype plugin indent on
 
@@ -49,6 +49,7 @@ autocmd GUIEnter * set visualbell t_vb=
 " setup NERDTRee
 let g:NERDTreeWinSize = 40
 autocmd VimEnter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " set ruby as syntax for files without extensions
 autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=ruby | endif
