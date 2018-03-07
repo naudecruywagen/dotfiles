@@ -26,5 +26,6 @@ alias o='open -a'
 alias vim=mvim
 alias vi=mvim
 alias reloadzsh="source ~/.zshrc"
+alias recordsim="xcrun simctl io booted recordVideo simulatorRecording.mov"
 
 eval "$(rbenv init -)"
