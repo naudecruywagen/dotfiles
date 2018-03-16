@@ -10,8 +10,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
 call plug#end()
 
-" vundle setup
-
 filetype plugin indent on
 
 " styling
@@ -30,12 +28,8 @@ set clipboard=unnamed
 set mouse=a
 set ignorecase
 set smartcase
-
-" cusror styles
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
-set guicursor+=n-v-c:blinkon0
-set guicursor+=i:blinkwait10
+set background=dark
+set gfn=Menlo:h14
 
 " not to break on words
 set formatoptions=1
@@ -57,3 +51,7 @@ autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=ruby | endif
 " esc to clear search highlighting
 nnoremap <silent> <esc> :noh<cr><esc>
 nnoremap <esc>[ <esc>[
+
+command Prettyjson execute '%!python -m json.tool'
+command Prettyxml execute '%!xmllint --format -'
+
