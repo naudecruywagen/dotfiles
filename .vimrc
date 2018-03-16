@@ -52,6 +52,7 @@ autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=ruby | endif
 nnoremap <silent> <esc> :noh<cr><esc>
 nnoremap <esc>[ <esc>[
 
+" user defined commands
 command Prettyjson execute '%!python -m json.tool'
 command Prettyxml execute '%!xmllint --format -'
 
