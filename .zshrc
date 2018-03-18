@@ -27,5 +27,6 @@ alias vim=mvim
 alias vi=mvim
 alias reloadzsh="source ~/.zshrc"
 alias recordsim="xcrun simctl io booted recordVideo simulatorRecording.mov"
+alias gmd='git merge develop'
 
 eval "$(rbenv init -)"
