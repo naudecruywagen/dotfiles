@@ -21,6 +21,7 @@ echo "Linking dotfiles"
 ln -s ~/git/dotfiles/.zshrc ~/.zshrc
 ln -s ~/git/dotfiles/.ideavimrc ~/.ideavimrc
 ln -s ~/git/dotfiles/.xvimrc ~/.xvimrc
+ln -s ~/git/dotfiles/.vimrc ~/.vimrc
 
 echo "Instaling oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
