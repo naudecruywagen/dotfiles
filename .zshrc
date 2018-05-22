@@ -29,4 +29,8 @@ alias reloadzsh="source ~/.zshrc"
 alias recordsim="xcrun simctl io booted recordVideo simulatorRecording.mov"
 alias gmd='git merge develop'
 
+function push() {
+    xcrun simctl openurl booted $1
+}
+
 eval "$(rbenv init -)"
