@@ -8,6 +8,9 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
+Plug 'plasticboy/vim-markdown'
+Plug 'jamshedvesuna/vim-markdown-preview'
+Plug 'keith/swift.vim'
 call plug#end()
 
 filetype plugin indent on
@@ -44,6 +47,12 @@ let g:NERDTreeWinSize = 40
 autocmd VimEnter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+" setup vim-markdown
+let g:vim_markdown_folding_disabled = 1
+
+" setup vim-markdown-preview
+let vim_markdown_preview_github = 1
+
 " set ruby as syntax for files without extensions
 autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=ruby | endif
 
@@ -52,6 +61,9 @@ nnoremap <silent> <esc> :noh<cr><esc>
 nnoremap <esc>[ <esc>[
 
 " user defined commands
-command Prettyjson execute '%!python -m json.tool'
-command Prettyxml execute '%!xmllint --format -'
+command! Prettyjson execute '%!python -m json.tool'
+command! Prettyxml execute '%!xmllint --format -'
+
+" fix control a remapping
+nnoremap <c-a> <c-a>
 

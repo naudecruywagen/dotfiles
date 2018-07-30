@@ -28,6 +28,7 @@ alias vi=mvim
 alias reloadzsh="source ~/.zshrc"
 alias recordsim="xcrun simctl io booted recordVideo simulatorRecording.mov"
 alias gmd='git merge develop'
+alias icloud='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
 
 function push() {
     xcrun simctl openurl booted $1
