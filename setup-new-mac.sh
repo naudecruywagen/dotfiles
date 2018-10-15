@@ -15,7 +15,7 @@ echo "Creating git directory"
 mkdir ~/git
 
 echo "Cloning dotfiles repo"
-git clone git@github.com:naudecruywagen/dotfiles.git ~/git
+git clone git@github.com:naudecruywagen/dotfiles.git ~/git/dotfiles
 
 echo "Linking dotfiles"
 ln -s ~/git/dotfiles/.zshrc ~/.zshrc
