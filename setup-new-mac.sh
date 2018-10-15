@@ -11,8 +11,8 @@ brew install macvim
 echo "Setting PATH"
 export PATH=/usr/local/bin:$PATH
 
-echo "Creating git directory"
-mkdir ~/git
+echo "Creating dotfiles directory"
+mkdir ~/git/dotfiles
 
 echo "Cloning dotfiles repo"
 git clone git@github.com:naudecruywagen/dotfiles.git ~/git/dotfiles
