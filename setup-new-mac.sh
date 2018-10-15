@@ -1,6 +1,7 @@
 #/bin/bash
 
 # this is a work in progress. 
+# download this script: curl --remote-name https://raw.githubusercontent.com/naudecruywagen/dotfiles/master/setup-new-mac.sh
 
 echo "Instaling Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
