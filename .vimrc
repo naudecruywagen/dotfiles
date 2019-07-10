@@ -8,10 +8,17 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
-Plug 'plasticboy/vim-markdown'
-Plug 'jamshedvesuna/vim-markdown-preview'
-Plug 'keith/swift.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
 call plug#end()
+
+if executable('sourcekit-lsp')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'sourcekit-lsp',
+        \ 'cmd': {server_info->['sourcekit-lsp']},
+        \ 'whitelist': ['swift'],
+        \ })
+endif
 
 filetype plugin indent on
 
