@@ -74,3 +74,7 @@ command! Prettyxml execute '%!xmllint --format -'
 " fix control a remapping
 nnoremap <c-a> <c-a>
 
+augroup myvimrchooks
+    au!
+    autocmd bufwritepost .vimrc source ~/.vimrc
+augroup end
