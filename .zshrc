@@ -1,5 +1,6 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$PATH/bin:/usr/local/bin:
+export PATH=$PATH/.rbenv/bin:
+export PATH=$PATH/git/sourcekit-lsp/.build/debug/
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -29,9 +30,16 @@ alias reloadzsh="source ~/.zshrc"
 alias recordsim="xcrun simctl io booted recordVideo simulatorRecording.mov"
 alias gmd='git merge develop'
 alias icloud='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
+alias be='bundle exec'
+alias st='speedtest'
 
 function push() {
     xcrun simctl openurl booted $1
+}
+
+function paste() {
+    pbcopy $1
+    xcrun simctl pbpaste booted
 }
 
 eval "$(rbenv init -)"
