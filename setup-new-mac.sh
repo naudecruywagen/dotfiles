@@ -38,4 +38,4 @@ echo "Installing fastlane"
 gem install fastlane
 
 echo "Installing cocoapods"
-gem install cocoapods 1.5.2
+gem install cocoapods 1.11.3
