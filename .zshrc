@@ -35,6 +35,8 @@ alias st='speedtest'
 alias make='$(xcrun --sdk iphoneos --find clang) -isysroot $(xcrun --sdk iphoneos --show-sdk-path) -arch armv7 -arch armv7s -arch arm64'
 alias simdir='open `xcrun simctl get_app_container booted com.gopotluck.over data`'
 alias uninstallover='xcrun simctl uninstall booted com.gopotluck.over'
+alias uninstalltruuu='xcrun simctl uninstall booted "games.decibel.truuu"'
+alias uninstallsongsnap='xcrun simctl uninstall booted "games.decibel.songsnap"'
 
 function push() {
     xcrun simctl openurl booted $1
