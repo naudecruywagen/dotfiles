@@ -1,6 +1,7 @@
-export PATH=$PATH/bin:/usr/local/bin:
-export PATH=$PATH/.rbenv/bin:
-export PATH=$PATH/git/sourcekit-lsp/.build/debug/
+export PATH=$PATH:/bin:/usr/local/bin
+export PATH=$PATH:/.rbenv/bin
+export PATH=$PATH:/git/sourcekit-lsp/.build/debug/
+export PATH="/opt/homebrew/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -13,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git pod)
+plugins=(git z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -46,4 +47,8 @@ function paste() {
     xcrun simctl pbpaste booted
 }
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
+export PATH="$HOME/.local/bin:$PATH"
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/Users/naude/.lmstudio/bin"
